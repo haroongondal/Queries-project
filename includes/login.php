@@ -45,6 +45,7 @@
     if(isset($_POST['submit'])){  
         $_SESSION['first_name']=$_POST['first_name'];
         $_SESSION['last_name']=$_POST['last_name'];
+        $_SESSION['login_count'] = 0;
         header('location:../index.php');
     }
 ?>

@@ -3,7 +3,6 @@
   <?php //include 'name.php'; ?>
     <!-- if($_GET['first_name']) -->
   <?php
-    $currentCookieParams = implode(session_get_cookie_params())[0];
     session_start();
     if($_SESSION['first_name']!='')
     {
@@ -12,7 +11,7 @@
           $_SESSION['first_name']='Professor';
           $_SESSION['last_name']='';
         }
-      echo 'Welcome to my site, '.$_SESSION['first_name'].' '.$_SESSION['last_name'].'!'.$currentCookieParams;
+      echo 'Welcome to my site, '.$_SESSION['first_name'].' '.$_SESSION['last_name'].'!';
     }
     else 
       echo 'Guest User';

@@ -1,6 +1,10 @@
 <section>
 
   <?php
+  
+  $sql = " Select * from employees";
+  $employees = $conn->query($sql);
+
 
     if (isset($_GET['question_1'])) {
       include 'MinMaxSalaries.php';
@@ -26,11 +30,16 @@
     else if (isset($_GET['add_employee'])) {
       include 'AddEmployee.html';
     }
-
-    $currentCookieParams = implode(session_get_cookie_params())[0];
-    if($currentCookieParams == 0){
-      include 'welcome.html.php';
+    else if (isset($_GET['del_employee'])) {
+      include 'DeleteEmployee.php';
     }
+    else{
+      $currentCookieParams = implode(session_get_cookie_params())[0];
+      if($currentCookieParams == 0){
+        include 'welcome.html.php';
+      }
+    }
+
   ?>
 
 </section>
