@@ -17,10 +17,15 @@
 ?>
 
 <nav>
-  <a href="<?php echo nav_url('display_name'); ?>">Display Names</a>
-  <a href="<?php echo nav_url('employee_department'); ?>">Employee Department</a>
-  <a href="<?php echo nav_url('employee_lasts'); ?>">Employee Last Name with S or T</a>
-  <a href="<?php echo nav_url('employee_pf'); ?>">Employee PF</a>
-  <a href="<?php echo nav_url('employee_salary'); ?>">Employee Salaries 10,000</a>
-  <a href="<?php echo nav_url('total_salary'); ?>">Total Salaries</a>
+  <a href="<?php echo nav_url('question_1'); ?>">Question 1</a>
+  <a href="<?php echo nav_url('question_2'); ?>">Question 2</a>
+  <a href="<?php echo nav_url('question_3'); ?>">Question 3</a>
+  <a href="<?php echo nav_url('question_4'); ?>">Question 4</a>
+  <a href="<?php echo nav_url('question_5'); ?>">Question 5</a>
+  <a href="<?php echo nav_url('question_6'); ?>">Question 6</a>
+  <a href="<?php echo nav_url('question_7'); ?>">Question 7</a>
+  <a href="<?php echo nav_url('question_7'); ?>">Question 7</a>
+  <a href="<?php echo nav_url('add_employee'); ?>">Add Employee</a>
+  <a href="<?php echo nav_url('del_employee'); ?>">Delete Employee</a>
+
 </nav>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Literata|Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+    <link rel="stylesheet" href="../resources/css/style1.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./resources/js/script.js"></script>
+
+    <title>Employee Manager</title>
+  </head>
+  <body background="blue">
+    <form name="add_employee" action="includes/AddEmployee.php" method="POST">
+      <table width="50%" border="0px" cellspacing="20" align="center">
+        <tr>
+          <td>
+            <input
+              name="first_name"
+              required
+              placeholder="First Name"
+              id="type"
+              type="text"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              name="last_name"
+              placeholder="Last Name"
+              id="type"
+              type="text"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input name="email" placeholder="Email" id="email" type="email" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input
+              name="phone_number"
+              placeholder="Phone Number"
+              id="type"
+              type="tel"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              name="Hire Date"
+              placeholder="Hir Date"
+              id="type"
+              type="date"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input name="Salary" placeholder="salary" id="type" type="number" />
+          </td>
+        </tr>
+        <tr>
+          <br /><br />
+        </tr>
+        <tr align="center">
+          <td>
+            <input
+              name="submit"
+              type="submit"
+              value="Add Employee"
+              id="button"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
