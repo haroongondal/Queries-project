@@ -104,10 +104,10 @@ section form {
   max-width: 900px;
   margin: 0 auto;
   font-size: 0.9em;
-  background-color: black;
+  /* background-color: black; */
   border: 8px solid white;
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.5); */
 }
 .del_employee {
   max-width: 500px;
@@ -125,11 +125,14 @@ section form {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #444;
-  color: white;
+  color: black;
 }
 .add_employee select,
 .del_employee select {
   color: #444;
+}
+.add_employee #type{
+  width: 100%;
 }
 label {
   color: white;

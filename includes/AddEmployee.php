@@ -1,5 +1,10 @@
 <?php 
-        if(isset($_POST['submit'])){ 
+        if(isset($_POST['submit'])){
+            $sql = "select EMPLOYEE_ID from employees ORDER BY EMPLOYEE_ID DESC LIMIT 1";
+            $query = $conn->query($sql);
+            $employee_id = mysqli_fetch_all($query, MYSQLI_ASSOC);
+            $employee_id = $employee_id[0]['EMPLOYEE_ID'];
+            $employee_id++;
             $first_name = $_POST['first_name'];
             $last_name = $_POST['last_name'];
             $email = $_POST['email'];
@@ -12,7 +17,7 @@
             $DEPARTMENT_ID = $_POST['DEPARTMENT_ID'];
             $sql = "select * from employees";
             $get_employee = $conn->query($sql);
-            $sql = "Insert into employees (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER ,HIRE_DATE, JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID) values ('300', '".$first_name."', '".$last_name."', '".$email."', '".$phone_number."', '".$hire_date."', '".$job_id."',  '".$Salary."', '0', '".$MANAGER_ID."', '".$DEPARTMENT_ID."')";
+            $sql = "Insert into employees (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER ,HIRE_DATE, JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID) values ('".$employee_id."', '".$first_name."', '".$last_name."', '".$email."', '".$phone_number."', '".$hire_date."', '".$job_id."',  '".$Salary."', '0', '".$MANAGER_ID."', '".$DEPARTMENT_ID."')";
             $query = $conn->query($sql);
             if($query){
                     header("Location: index.php?employee");             

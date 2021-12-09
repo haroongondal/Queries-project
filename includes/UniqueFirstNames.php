@@ -5,7 +5,7 @@
   $question = 'Write a query to get all unique first names that start with the letter P from the employees table.  Output the names in all upper case. Sort the results in ascending order.';
 
   $sql = "
-  SELECT DISTINCT UPPER(FIRST_NAME) 'First Name' 
+  SELECT DISTINCT UPPER(FIRST_NAME) 'First_Name' 
   FROM employees 
   WHERE FIRST_NAME LIKE 'P%' 
   ORDER BY FIRST_NAME ASC

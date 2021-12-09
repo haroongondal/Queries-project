@@ -12,6 +12,8 @@
 
     // create rows of data
     $records = mysqli_fetch_all($query, MYSQLI_ASSOC);
+    // var_dump($records);
+    // die;
     $data_rows = '';
     foreach ($records as $record) {
       $data_rows .= '<tr>';
