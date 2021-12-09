@@ -20,11 +20,11 @@
     <title>Employee Manager</title>
   </head>
   <body background="blue">
-    <form name="add_employee" action="includes/AddEmployee.php" method="POST">
+    <form class="add_employee" action="" method="POST">
       <table width="75%" border="0px" cellspacing="20" align="center">
         <tr>
           <td>
-            <label>First Name:</label><br>
+            <label>First Name:</label><br />
             <input
               name="first_name"
               required
@@ -36,7 +36,7 @@
         </tr>
         <tr>
           <td>
-            <label>Last Name:</label><br>
+            <label>Last Name:</label><br />
             <input
               name="last_name"
               placeholder="Last Name"
@@ -47,14 +47,14 @@
         </tr>
         <tr>
           <td>
-            <label>Email:</label><br>
+            <label>Email:</label><br />
             <input name="email" placeholder="Email" id="type" type="email" />
           </td>
         </tr>
 
         <tr>
           <td>
-            <label>Phone:</label><br>
+            <label>Phone:</label><br />
             <input
               name="phone_number"
               placeholder="Phone Number"
@@ -65,7 +65,7 @@
         </tr>
         <tr>
           <td>
-            <label>Hire Date:</label><br>
+            <label>Hire Date:</label><br />
             <input
               name="hire_date"
               placeholder="Hire Date"
@@ -76,32 +76,47 @@
         </tr>
         <tr>
           <td>
-            <label>Job Id:</label><br>
+            <label>Job Id:</label><br />
             <input name="job_id" placeholder="job id" id="type" type="number" />
           </td>
         </tr>
         <tr>
           <td>
-            <label>Salary:</label><br>
+            <label>Salary:</label><br />
             <input name="Salary" placeholder="salary" id="type" type="number" />
           </td>
         </tr>
         <tr>
           <td>
-            <label>COMMISSION_PCT:</label><br>
-            <input name="COMMISSION_PCT" placeholder="COMMISSION_PCT" id="type" type="number" />
+            <label>COMMISSION_PCT:</label><br />
+            <input
+              name="COMMISSION_PCT"
+              placeholder="COMMISSION_PCT"
+              id="type"
+              type="number"
+            />
           </td>
         </tr>
         <tr>
           <td>
-            <label>MANAGER_ID:</label><br>
-            <input name="MANAGER_ID" placeholder="MANAGER_ID" id="type" type="number" />
+            <label>MANAGER_ID:</label><br />
+            <input
+              name="MANAGER_ID"
+              placeholder="MANAGER_ID"
+              id="type"
+              type="number"
+            />
           </td>
         </tr>
         <tr>
           <td>
-            <label>DEPARTMENT_ID:</label><br>
-            <input name="DEPARTMENT_ID" placeholder="DEPARTMENT_ID" id="type" type="number" />
+            <label>DEPARTMENT_ID:</label><br />
+            <input
+              name="DEPARTMENT_ID"
+              placeholder="DEPARTMENT_ID"
+              id="type"
+              type="number"
+            />
           </td>
         </tr>
         <tr>
@@ -113,7 +128,7 @@
               name="submit"
               type="submit"
               value="Add Employee"
-              id="button"
+              id="add-button"
             />
           </td>
         </tr>

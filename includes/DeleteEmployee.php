@@ -1,3 +1,11 @@
+<?php
+    if(isset($_POST['submit'])){  
+        $id = $_POST['employee'];
+        $sql = "Delete from employees where employee_id=$id";
+        mysqli_query($conn, $sql);
+        header("Refresh:0");
+    }
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,7 +28,7 @@
     <title>Delete Employee</title>
   </head>
   <body background="blue">
-    <form name="del_employee" action="" method="POST">
+    <form class="del_employee" action="" method="POST">
       <table width="50%" border="0px" cellspacing="20" align="center">
 
         <tr>
@@ -55,11 +63,3 @@
     </form>
   </body>
 </html>
-<?php
-    if(isset($_POST['submit'])){  
-        $id = $_POST['employee'];
-        $sql = "Delete from employees where employee_id=$id";
-        mysqli_query($conn, $sql);
-      
-    }
-?>

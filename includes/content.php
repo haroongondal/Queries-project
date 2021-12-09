@@ -4,6 +4,10 @@
   
   $sql = " Select * from employees";
   $employees = $conn->query($sql);
+  $sql = " Select * from jobs";
+  $jobs = $conn->query($sql);
+  $sql = " Select * from departments";
+  $departments = $conn->query($sql);
 
 
     if (isset($_GET['question_1'])) {
@@ -28,10 +32,13 @@
     include 'FirstThreeCharacters.php';
     }
     else if (isset($_GET['add_employee'])) {
-      include 'AddEmployee.html';
+      include 'AddEmployee.php';
     }
     else if (isset($_GET['del_employee'])) {
       include 'DeleteEmployee.php';
+    }
+    else if (isset($_GET['employee'])) {
+      include 'Employee.php';
     }
     else{
       $currentCookieParams = implode(session_get_cookie_params())[0];
