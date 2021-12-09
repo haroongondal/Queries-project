@@ -145,7 +145,10 @@ label {
   width: 200px;
 }
 .welcome {
-  background-color: green;
+  background-color: #7FADCC;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 100px;
   font-size: 20px;
   font-weight: 500;

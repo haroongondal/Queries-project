@@ -41,7 +41,7 @@
                foreach ($employees as $employee) {
 
                   echo '<option value='.$employee['EMPLOYEE_ID'].'>
-                  '.$employee['FIRST_NAME'].'
+                  '.$employee['FIRST_NAME'].' '.$employee['LAST_NAME'].'
              </option>';
                }
                ?>

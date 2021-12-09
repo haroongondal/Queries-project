@@ -10,7 +10,7 @@ if($_SESSION['first_name']!='')
       $_SESSION['last_name']='';
     }
     if($login_count == 0)
-  echo '<div class="welcome"><div>Welcome  '.$_SESSION['first_name'].' '.$_SESSION['last_name'].' to my site for the First Time.</div> <div>We Are Glad To see you Here</div>';
+  echo '<div class="welcome"><div>Welcome!</div></div>';
 }
 $_SESSION['login_count'] = $login_count + 1;
 
