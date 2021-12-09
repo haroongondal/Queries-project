@@ -1,10 +1,37 @@
 <?php
-    if(isset($_POST['submit'])){  
-        $id = $_POST['employee'];
-        $sql = "Delete from employees where employee_id=$id";
-        mysqli_query($conn, $sql);
-        header("Refresh:0");
-    }
+
+            $id = $_GET['del_employee'];
+            $sql = "Delete from employees where employee_id=$id";
+            mysqli_query($conn, $sql);
+            // 
+
+        $fields = mysqli_fetch_fields($employees);
+
+        // create column headers by using the field names
+        $header_row = '';
+        foreach ($fields as $field) {
+          $header_row .= '<th>' . $field->name . '</th>';
+        }
+        $header_row .='<th>Action</th>';
+
+        // create rows of data
+        $records = mysqli_fetch_all($employees, MYSQLI_ASSOC);
+        // var_dump($records);
+        // die;
+        $data_rows = '';
+        foreach ($records as $record) {
+          $data_rows .= '<tr>';
+
+          foreach ($fields as $field) {
+            $data_rows .= '<td>' . $record[$field->name] . '</td>';
+          }
+          $data_rows .= '<td><button ><a href="/?del_employee='.$record['EMPLOYEE_ID'].'">Delete</a></button></td>';
+
+          $data_rows .= '</tr>';
+        }
+
+        echo '<table class="del_employee"><tr>' . $header_row . '</tr>' . $data_rows . '</table>';
+        
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +55,8 @@
     <title>Delete Employee</title>
   </head>
   <body background="blue">
-    <form class="del_employee" action="" method="POST">
+    
+    <!-- <form class="del_employee" action="" method="POST">
       <table width="50%" border="0px" cellspacing="20" align="center">
 
         <tr>
@@ -60,6 +88,6 @@
           </td>
         </tr>
       </table>
-    </form>
+    </form> -->
   </body>
 </html>

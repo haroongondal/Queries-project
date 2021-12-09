@@ -111,6 +111,21 @@ section form {
 }
 .del_employee {
   max-width: 500px;
+  background: none ;
+}
+.del_employee button {
+  padding: 10px;
+  background: #cd1313c2;
+  font-weight: bold;
+  border: 2px solid red;
+  border-radius: 10px;
+}
+.del_employee button a{
+  text-decoration: none;
+  color: white;
+}
+.del_employee tr:nth-child(even){
+  background-color: rgb(202, 253, 255) !important;
 }
 .add_employee tr,
 .del_employee tr {

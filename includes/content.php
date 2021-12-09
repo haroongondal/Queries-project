@@ -9,7 +9,6 @@
   $sql = " Select * from departments";
   $departments = $conn->query($sql);
 
-
     if (isset($_GET['question_1'])) {
       include 'MinMaxSalaries.php';
     }
@@ -41,9 +40,12 @@
       include 'Employee.php';
     }
     else{
-      $currentCookieParams = implode(session_get_cookie_params())[0];
+      $currentCookieParams = isset($_SESSION['login_count']) ? $_SESSION['login_count'] : 1; 
       if($currentCookieParams == 0){
         include 'welcome.html.php';
+      }
+      else{
+        $_SESSION['login_count'] = $currentCookieParams + 1;
       }
     }
 
